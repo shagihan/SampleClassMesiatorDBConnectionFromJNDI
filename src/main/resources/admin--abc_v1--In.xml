@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence xmlns="http://ws.apache.org/ns/synapse" name="admin--abc:v1--In">
+   <log level="custom">
+      <property name="TRACE" value="API Mediation Extension"/>
+   </log>
+   <class name="org.wso2.sample.dbconn.DBConnectionFromJNDI">
+   </class>
+   <log level="custom">
+      <property name="Database version from class mediator : " expression="get-property('DatabaseResult')"/>
+   </log>
+</sequence>
